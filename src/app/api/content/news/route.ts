@@ -51,7 +51,6 @@ export async function GET(
     }
   }
 
-  console.log("queryyyyyyyyyyyyyyyyyyyyyyyyyy");
   const newsItems = await prisma.news.findMany({
     select: {
       news_id: true,
