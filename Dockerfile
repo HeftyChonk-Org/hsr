@@ -1,3 +1,6 @@
+# TODO: after building, it seems only .next is required for the 'npm run start' to serve the traffic
+#       build the most compact image to run this web entirely on containers
+
 FROM node:18-alpine
 
 WORKDIR /app

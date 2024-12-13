@@ -3,7 +3,9 @@ version: "3.9"
 services:
   # next:
   #   container_name: next
-  #   build: .
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
   #   ports:
   #     - 3000:3000
   #   volumes:
@@ -11,9 +13,7 @@ services:
   #     - ./public:/app/public
   #   restart: always
   #   env_file:
-  #     - .env.local
-  #     - .env.development
-  #     - .env.test
+  #     - .env.production.local
   #     - .env.production
   #   depends_on:
   #     mysql:
