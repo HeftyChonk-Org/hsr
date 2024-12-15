@@ -31,7 +31,7 @@ export async function GET(
 
     try {
       client = createClient({
-        url: "redis://default:P@ssw0rd@localhost:6379",
+        url: `redis://${process.env.REDIS_USER}:${process.env.REDIS_PASSWORD}@${process.env.REDIS_USER}:${process.env.REDIS_PORT}`,
       });
       await client.connect();
 
@@ -51,7 +51,6 @@ export async function GET(
     }
   }
 
-  console.log("queryyyyyyyyyyyyyyyyyyyyyyyyyy");
   const newsItems = await prisma.news.findMany({
     select: {
       news_id: true,
